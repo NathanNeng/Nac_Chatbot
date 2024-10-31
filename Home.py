@@ -7,15 +7,14 @@ st.set_page_config(
 
 
 
-st.header('🤖 NAC Chatbot: Chatbot de auxílio a carreira profissional',divider=True)
-st.session_state['curso'] = st.selectbox('Selecione seu curso',('Administração','Engenharia de alimentos','Engenharia de computação','Engenharia de controle e automação'))
+st.header('🤖 NAC Chatbot: Chatbot de Auxílio à Carreira Profissional',divider=True)
+st.session_state['curso'] = st.selectbox('Selecione seu curso',('Administração','Engenharia de Alimentos','Engenharia de Computação','Engenharia de Controle e Automação'))
 
 st.markdown('''\n\n
 Estou aqui para te ajudar a questonamentos sobre carreira, com base nas experiências de alunos que já realizaram estágio.
 Fui alimentado com extensos relatórios de estágios finalizados, as informações que possuo:
 ### Introdução
-Contém o contexto do projeto, incluindo os problemas ou desafios que o projeto pretende resolver, também esboça os objetivos do projeto e a abordagem ou metodologia utilizada para alcança-lós.
-Os detalhes que seguirão e destacar a importância do projeto dentro de um contexto mais amplo.
+Contém o contexto do projeto, incluindo os problemas ou desafios que ele pretende resolver, além de esboçar os objetivos e a abordagem ou metodologia utilizada para alcançá-los. Os detalhes que seguem destacam a importância do projeto dentro de um contexto mais amplo                     
 ### Caracterização da Empresa
 Fornece uma visão abrangente da empresa ou do contexto no qual o estágio ou projeto foi realizado. Incluindo:
 \nIdentificação da Empresa: Nome, localização, e informações de contato.\n

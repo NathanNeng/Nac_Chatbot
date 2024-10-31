@@ -16,7 +16,11 @@ if not 'chain' in st.session_state:
 chain = st.session_state['chain']
 memory = chain.memory
 mensagens = memory.load_memory_variables({})['chat_history']
-curso = st.session_state['curso']
+if 'curso' in st.session_state:   
+    curso = st.session_state['curso']
+else:
+    curso = 'Engenharia de Controle e Automação'
+
 cabecalho = "Inicie sua conversa" if len(mensagens) == 0 else 'Histórico da sua mensagem'
 st.session_state['ver_botões'] = True if len(mensagens) == 0 else False
 
@@ -76,7 +80,6 @@ if nova_mensagem:
         chat = st.chat_message('ai',avatar='🤖')
         chat.markdown('Gerando resposta')
         resposta = chain.invoke({'question': nova_mensagem,'chat_history':mensagens})
-        #st.session_state['ultima_resposta'] = resposta
         st.rerun()
 
 
