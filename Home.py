@@ -8,7 +8,20 @@ st.set_page_config(
 
 
 st.header('🤖 NAC Chatbot: Chatbot de Auxílio à Carreira Profissional',divider=True)
-st.session_state['curso'] = st.selectbox('Selecione seu curso',('Administração','Engenharia de Alimentos','Engenharia de Computação','Engenharia de Controle e Automação'))
+if 'curso' in st.session_state:
+    if st.session_state['curso'] == 'Administração':
+        var_index = 0
+    elif st.session_state['curso'] == 'Engenharia de Alimentos':
+        var_index = 1
+    elif st.session_state['curso'] == 'Engenharia de Computação':
+        var_index = 2
+    elif st.session_state['curso'] == 'Engenharia de Controle e Automação':
+        var_index = 3
+else:
+    var_index = 0
+
+st.session_state['curso'] = st.selectbox('Selecione seu curso',('Administração','Engenharia de Alimentos','Engenharia de Computação','Engenharia de Controle e Automação'),index=var_index)
+
 
 st.markdown('''\n\n
 Estou aqui para te ajudar a questonamentos sobre carreira, com base nas experiências de alunos que já realizaram estágio.

@@ -67,9 +67,6 @@ if st.session_state['ver_botões']:
         pergunta  = pergunta5
         input_user(pergunta)
     
-    if btn1 or btn2 or btn3 or btn4 or btn5:
-        st.rerun()
-    
 
 
 nova_mensagem = st.chat_input('Faça sua pergunta...')
