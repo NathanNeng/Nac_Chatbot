@@ -45,7 +45,7 @@ if st.session_state['ver_botões']:
     pergunta2 = f'Quais habilidades ou conhecimentos específicos foram necessários para o estágio em {curso}?'
     pergunta3 = f'Quais foram os principais problemas ou desafios identificados no início do estágio de {curso}?'
     pergunta4 = 'Como o projeto de estágio contribuiu para o desenvolvimento pessoal e profissional do estagiário?'
-    pergunta5 = f'Em quais empresas foram foram realizados estágios de {curso}'
+    pergunta5 = f'Em quais empresas foram realizados estágios de {curso}'
     btn1 = st.button(pergunta1)
     btn2 = st.button(pergunta2)
     btn3 = st.button(pergunta3)
